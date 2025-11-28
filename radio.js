@@ -64,7 +64,7 @@ document.getElementById("startBtn").onclick = async () => {
 
 // ---------------- 시그널링 서버 연결 ----------------
 function connectSignaling() {
-  socket = new WebSocket("ws:https://f1radio-signaling-leviathan06.onrender.com/");
+  socket = new WebSocket("wss:https://f1radio-signaling-leviathan06.onrender.com/");
 
   socket.onmessage = async evt => {
     console.log("[SIGNALING:RECV]", evt.data);
@@ -163,6 +163,7 @@ function setupDirectorUI() {
 // ---------------- 키 이벤트 ----------------
 function setupKeys() {
   window.addEventListener("keydown", e => {
+    console.log(localStream.getAudioTracks()[0].readyState);
     if (e.code === "Space" && !pttActive) {
       pttActive = true;
       playBeepImmediate().then(() => startPTT());
