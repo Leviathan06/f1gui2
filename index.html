@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>F1 Radio System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h2>F1 Web Radio System</h2>
+
+  <!-- 초기 설정 -->
+  <div id="setup">
+    <label>이름:</label>
+    <input id="userName" placeholder="홍길동" />
+
+    <label>모드:</label>
+    <select id="role">
+      <option value="driver">드라이버</option>
+      <option value="director">레이스 디렉터</option>
+    </select>
+
+    <label>팀:</label>
+    <select id="team">
+      <option value="team1">Team 1</option>
+      <option value="team2">Team 2</option>
+      <option value="team3">Team 3</option>
+      <option value="team4">Team 4</option>
+      <option value="team5">Team 5</option>
+    </select>
+
+    <button id="startBtn">시작</button>
+  </div>
+
+  <!-- 조작 UI -->
+  <div id="controls" style="display:none; margin-top:20px;">
+    <p>PTT: Space / 전체 방송: Z</p>
+
+    <div id="statusBox">
+      <div id="micStatus">마이크: 대기중</div>
+      <div id="sendModeStatus">송출: 내 팀</div>
+    </div>
+
+    <select id="directorTeamSelect" style="display:none; margin-top:10px;">
+      <option value="all">전체 듣기</option>
+      <option value="team1">Team 1</option>
+      <option value="team2">Team 2</option>
+      <option value="team3">Team 3</option>
+      <option value="team4">Team 4</option>
+      <option value="team5">Team 5</option>
+    </select>
+
+    <select id="directorSpeakSelect" style="display:none; margin-top:10px;">
+      <option value="none">송출 없음</option>
+      <option value="all">전체 송출</option>
+      <option value="team1">Team 1 송출</option>
+      <option value="team2">Team 2 송출</option>
+      <option value="team3">Team 3 송출</option>
+      <option value="team4">Team 4 송출</option>
+      <option value="team5">Team 5 송출</option>
+    </select>
+
+    <!-- 비주얼라이저 영역 -->
+    <div id="visualizerArea"></div>
+  </div>
+
+  <script src="radio.js"></script>
+</body>
+</html>

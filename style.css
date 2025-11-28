@@ -1,0 +1,61 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#setup {
+    margin-bottom: 20px;
+}
+
+#controls {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#statusBox {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.active {
+    color: red;
+    font-weight: bold;
+}
+
+/* 비주얼라이저 전체 영역 */
+#visualizerArea {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* 개별 비주얼라이저 박스 */
+.visBox {
+    background: #111;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speakerName {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.visCanvas {
+    background: black;
+    border: 1px solid #333;
+}
+  
