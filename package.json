@@ -1,0 +1,12 @@
+{
+    "name": "f1radio-signaling",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "signaling.js",
+    "scripts": {
+    "start": "node signaling.js"
+    },
+    "dependencies": {
+    "ws": "^8.13.0"
+    }
+}
